@@ -4,6 +4,7 @@ import MiddlePanel1 from './MiddlePanel1'
 import MiddlePanel2 from './MiddlePanel2'
 import MiddlePanel3 from './MiddlePanel3'
 import MiddlePanel4 from './MiddlePanel4'
+import MiddlePanel5 from './MiddlePanel5'
 import Footer from './Footer'
 import StickyLeftSocialNetworksLinks from './StickyLeftSocialNetworksLinks'
 
@@ -18,6 +19,7 @@ const App = () => {
       <MiddlePanel2 />
       <MiddlePanel3 />
       <MiddlePanel4 />
+      <MiddlePanel5 />
       <Footer />
     </div>
   );
