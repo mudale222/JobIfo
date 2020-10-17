@@ -7,6 +7,18 @@ html {
     box-sizing: inherit;
 }
 
+body {
+    font-family: 'Alef', 'Arial', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
 .topPanel {
     background: url("/topPanelBg.jpg");
     height: 26.56rem;
@@ -110,8 +122,8 @@ html {
 
 .searchForJobDropdown {
     direction: rtl;
-
 }
+
 .searchForJobDropdown .dropdown-toggle {
     width: 100%;
     color: grey;
@@ -144,6 +156,254 @@ html {
     margin-left: 2rem;
 }
 
-/* .sendResumeButton::before {
-    content: url("/origami.svg");
-} */
+.cardContainer {
+    max-width: 15rem;
+    height: 19rem;
+    background: #FFFFFF;
+    margin-left: 2rem;
+    padding: 0;
+}
+
+.cardPartsContainer {
+    height: 100%;
+    padding: 0!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+}
+
+.cardTitle, .cardPlus {
+    font-size: 1.3rem;
+    color: #202A68;
+    /* font-weight: 600; */
+    text-align: center;
+    line-height: 0.9rem;
+}
+
+.cardBottomPart {
+    height: 66%;
+    background-size: cover;
+}
+
+.cardTopPart {
+    margin-top: 2.5rem;
+}
+
+#card1 .cardBottomPart {
+    height: 100%;
+}
+
+#card1 .cardTopPart {
+    display: none;
+}
+
+#card1 .cardBottomPart img {
+    display: none;
+}
+
+.vectorImg {
+    position: absolute;
+    left: calc(50% - 8px);
+}
+
+#card5 .cardTopPart {
+    height: 0;
+    margin: 0;
+}
+
+#card5 .cardBottomPart ul {
+    list-style: none;
+    margin-top: rem;
+    line-height: 2rem;
+    margin-right: 2rem;
+}
+
+#card5 h5 {
+    color: grey;
+    opacity: 0.7;
+    margin-top: 2.5rem;
+}
+
+.cardHover {
+    background: #202A68;
+    height: 85%;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    overflow: hidden;
+    transition: all 500ms linear;
+    z-index: 10;
+}
+
+.cardHover img {
+    transition: visibility 0s 0.3s linear;
+}
+
+.cardHoverToggle {
+    transform: translateY(85%);
+    visibility: hidden;
+}
+
+.cardTopPart h5 {
+    transition: all 200ms linear;
+}
+
+.cardTopHoverToggle {
+    transform: translateY(-150%);
+    transition: all 150ms 400ms linear!important;
+}
+
+.cardHover ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.cardHover ul li {
+    margin-bottom: 0.25rem;
+}
+
+/******* marqueee *********************/
+
+.marquee {
+    height: 8rem;
+    overflow: hidden;
+    position: relative;
+    /* background: #fefefe; */
+    color: #333;
+    /* border: 1px solid #4a4a4a; */
+    width: 50%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.marquee p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 4rem;
+    text-align: center;
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -moz-animation: scroll-left 2s linear infinite;
+    -webkit-animation: scroll-left 2s linear infinite;
+    animation: scroll-left 20s linear infinite;
+}
+
+.marquee p div img {
+    margin-left: 7rem;
+}
+
+@-moz-keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+    }
+}
+
+@-webkit-keyframes scroll-left {
+    0% {
+        -webkit-transform: translateX(100%);
+    }
+    100% {
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+
+/*******end of marqueee**********/
+
+.active {
+    margin: 0!important;
+    padding: 0!important;
+}
+
+.jobBanner {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20%;
+}
+
+.carousel {
+    /* width: 65%;
+    margin: auto; */
+}
+
+.carousel-item img {
+    /* overflow: hidden!important; */
+}
+
+.carousel.carousel-fade .carousel-item {
+    display: block;
+    opacity: 0;
+    transition: opacity ease-out .7s;
+}
+
+.carousel.carousel-fade .carousel-item.active {
+    opacity: 1 !important;
+}
+
+.jobBannerContainer {
+    position: relative;
+}
+
+.jobBannerContainer form {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.jobBannerContainer form * {
+    position: absolute;
+    background: transparent;
+    border: none;
+    /* color: transparent; */
+}
+
+#jobBannerFormName {
+    top: 147px;
+    left: 54px;
+    width: 17rem;
+}
+
+#jobBannerFormTel {
+    top: 195px;
+    left: 54px;
+    width: 17rem;
+}
+
+#jobBannerFormEmail {
+    top: 242px;
+    left: 54px;
+    width: 17rem;
+}
+
+#jobBannerFormSubmit {
+    top: 290px;
+    left: 54px;
+    width: 17rem;
+    color: transparent;
+}
+
+#jobBannerFormSubmit:focus {
+    outline: none;
+    box-shadow: none;
+}

@@ -27,22 +27,7 @@ const TopPanel = () => {
 
             <div className="searchForJob row">
                 <button className="searchForJobButton">חפש</button>
-                {/* <div class="dropdown searchForJobDropdown">
-                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        כל האזורים
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">כל האזורים</a>
-                        <a class="dropdown-item" href="#">אזור דרום</a>
-                        <a class="dropdown-item" href="#">אזור ירושלים</a>
-                        <a class="dropdown-item" href="#">אזור השפלה</a>
-                        <a class="dropdown-item" href="#">אזור חיפה</a>
-                        <a class="dropdown-item" href="#">אזור הבקעה</a>
-                        <a class="dropdown-item" href="#">אזור הטוסיק</a>
-                    </div>
-                </div> */}
-                <select class="custom-select searchForJobDropdown">
+                <select className="custom-select searchForJobDropdown">
                     <option>כל האזורים</option>
                     <option>אזור דרום</option>
                     <option>אזור ירושלים</option>
