@@ -44,7 +44,7 @@ html, body {
 
 .middlePanel2 {
     background: url("/middlePanel2Bg.jpg");
-    height: 43.75rem;
+    height: 48rem;
 }
 
 .middlePanel3 {
@@ -54,7 +54,12 @@ html, body {
 
 .middlePanel4 {
     background: #202A68;
-    height: 25rem;
+    height: 31rem;
+}
+
+.middlePanel4 .col-35 {
+    flex: 0 0 30%;
+    max-width: 30%;
 }
 
 .middlePanel5 {
@@ -69,15 +74,37 @@ html, body {
 
 .topPanel-header {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.13) 0%, rgba(0, 0, 0, 0.4) 100%);
-    height: 4.5rem;
+    height: 5.25rem;
     color: white;
     margin: 0;
     position: relative;
+    font-family: 'Alef', 'Arial', sans-serif;
 }
 
 .topHeader-burgerWrapper {
-    padding: 2.25rem;
+    padding: 2.6rem;
     background: #212A66;
+}
+
+.topHeader-burgerWrapper ul {
+    list-style: none;
+    text-align: right;
+}
+
+.topHeader-burgerWrapper ul li {
+    padding-bottom: 2rem;
+}
+
+.topHeader-burgerWrapper ul li i {
+    float: left;
+    padding-right: 2.5rem;
+    margin-top: 0.75rem;
+}
+
+.menu {
+    position: fixed;
+    right: 0;
+    height: 100%;
 }
 
 .companySloganAndIcon {
@@ -89,6 +116,34 @@ html, body {
     width: 40%;
 }
 
+.jobAwaitNumber {
+    font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.loginJoin {
+    display: inline-flex;
+}
+
+.enter {
+    /* border-left: 2px solid;
+    border: 50%; */
+}
+
+.borderBetweenJoindAndEnter {
+    border-left: 2px solid #fff;
+    height: 1rem;
+    width: min-content;
+    margin-top: 0.15rem;
+}
+
+.borderBetweenLogin {
+    height: 2.25rem;
+    width: min-content;
+    margin-top: 1.05rem;
+    border-left: 3px solid orange;
+}
+
 .topPanelLogo-logo {
     height: 60%;
     margin-top: 0.2rem;
@@ -96,7 +151,7 @@ html, body {
 }
 
 .topPanelLogo-text {
-    font-size: 10px;
+    font-size: 0.85rem;
 }
 
 .searchForJob {
@@ -112,6 +167,16 @@ html, body {
     font-size: 13px;
     /* word-wrap: break-word; */
     border-radius: 0;
+    height: 3rem;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    white-space: pre-line;
+    position: relative;
+    top: -7px;
+    /* text-align: right; */
+    direction: rtl;
 }
 
 .searchForJobButton {
@@ -170,7 +235,7 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
 }
 
@@ -406,4 +471,78 @@ html, body {
 #jobBannerFormSubmit:focus {
     outline: none;
     box-shadow: none;
+}
+
+.flatCardContainer {
+    height: 18rem;
+    max-width: 20rem;
+}
+
+.flatCard {
+    height: 100%;
+}
+
+.flatCard ul {
+    list-style: none;
+}
+
+.flatCard ul li {
+    direction: rtl;
+}
+
+.flatCard li a {
+    font-size: 0.85rem;
+}
+
+.flatCardLink {
+    float: left;
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 20px;
+    margin-bottom: 9px;
+}
+
+.flatCard .card {
+    border-radius: 0;
+    border: none;
+    height: 100%;
+}
+
+.middlePanel4 {
+    color: #fff;
+    direction: rtl;
+    font-size: 1.0625rem;
+}
+
+.middlePanel5 {
+    color: #fff;
+}
+
+.middlePanel5Container {
+    padding-top: 10rem;
+}
+
+.middlePanel5Container .text {
+    font-size: 3.25rem;
+    margin-left: 1rem;
+}
+
+.middlePanel5Container i {
+    background: #202A68;
+    padding: 0.5rem;
+}
+
+.relativeContainer {
+    position: relative;
+    max-width: fit-content;
+    margin: auto;
+}
+
+.middlePanel5Container .comment {
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: -0.75rem;
+    right: 0;
 }

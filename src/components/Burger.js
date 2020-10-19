@@ -2,7 +2,7 @@ import React, { useEffect, useState, useReducer } from 'react'
 import styled from 'styled-components';
 
 const StyledMenu = styled.nav`
-  display: flex;
+  display: table;
   flex-direction: column;
   justify-content: center;
   background: #202965;
@@ -14,20 +14,28 @@ const StyledMenu = styled.nav`
   top: 0;
   right: 0;
   transition: transform 0.3s ease-in-out;
+  z-index:5;
+  padding-top: 4rem;
+  min-width: max-content;
 
   @media (max-width: 576px) {
       width: 100%;
     }
 
   a {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
-    padding: 2rem 0;
-    font-weight: bold;
-    letter-spacing: 0.5rem;
-    color: #0D0C1D;
+    //padding: 2.25rem 0;
+   // font-weight: bold;
+  //  letter-spacing: 0.5rem;
+    //color: #0D0C1D;
+    color:#fff;
     text-decoration: none;
     transition: color 0.3s linear;
+    white-space: nowrap;
+    padding-right: 2rem;
+    padding-bottom: 4rem;
+
 
     @media (max-width: 576px) {
       font-size: 1.5rem;
@@ -39,31 +47,19 @@ const StyledMenu = styled.nav`
     }
   }
 `
+const menuItems = ["חיפוש עבודה", "דרושים הייטק", "דף הבית", "השמת בכירים", "פורום עבודה בהייטק",
+  "חברות הייטק", "מידע לחברות", "מידע למועמד", "אודותנו",
+  "צור קשר", "About us"]
 
 const Menu = ({ open }) => {
   return (
     <StyledMenu open={open}>
-      {/* <a href="/"> */}
-      {/* <span role="img" aria-label="about us">💁🏻‍♂️</span> */}
-      {/* About us */}
-      {/* </a> */}
-      {/* <a href="/"> */}
-      {/* <span role="img" aria-label="price">💸</span> */}
-      {/* Pricing */}
-      {/* </a> */}
-      {/* <a href="/"> */}
-      {/* <span role="img" aria-label="contact">📩</span> */}
-      {/* Contact */}
-      {/* </a> */}
       <ul>
-        <li><a href="">asdfasdfasfd</a></li>
-        <li><a href="">asdfasdfsdffvvvvv</a></li>
-        <li><a href="">av</a></li>
-        <li><a href="">azzzzzzzsdfasdfsdffvvvvv</a></li>
-        <li><a href="">asdfasdffvvvvv</a></li>
-        <li><a href="">asdfasdffvvvvv</a></li>
-        <li><a href="">asdfasdffvvvvv</a></li>
-        <li><a href="">asdfasdffvvvvv</a></li>
+        {menuItems.map(el => {
+          return (
+            <li><i class="fa fa-chevron-left fa-lg"></i><a href="">{el}</a></li>
+          )
+        })}
       </ul>
     </StyledMenu>
   )
@@ -71,8 +67,8 @@ const Menu = ({ open }) => {
 
 const StyledBurger = styled.button`
   position: absolute;
-  top: 1.25rem;
-  right: 1.20rem;
+  top: 1.60rem;
+  right: 1.50rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

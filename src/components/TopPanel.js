@@ -10,17 +10,19 @@ const TopPanel = () => {
                     <img className="row topPanelLogo-logo" src="/jobInfoLogo.png" alt="JobInfo"></img>
                     <span className="row topPanelLogo-text">הרבה מעבר לחברת השמה</span>
                 </div>
-                <div className="loginJoinJobAwait">
-                    <div className="loginJoin">
-                        <label htmlFor="" className="enter">כניסה</label>
-                        <label htmlFor="" className="join">הצטרפות</label>
-                    </div>
-                    <div className="jobAwait">
+                <div className="loginJoinJobAwait row mt-3">
+                    <div className="jobAwait pr-3">
+                        <label htmlFor="" className="jobAwaitText">משרות ממתינות לך</label>
                         <label htmlFor="" className="jobAwaitNumber">1049</label>
-                        <label htmlFor="" className="jobAwaitNumber">משרות ממתינות לך</label>
+                    </div>
+                    <div className="borderBetweenLogin pr-1"></div>
+                    <div className="loginJoin ml-5">
+                        <label htmlFor="" className="join pr-1">הצטרפות</label>
+                        <div className="borderBetweenJoindAndEnter pr-1"></div>
+                        <label htmlFor="" className="enter">כניסה</label>
                     </div>
                 </div>
-                <div className="menu">
+                <div className="menu sticky-top">
                     <Burger />
                 </div>
             </div>
@@ -43,7 +45,7 @@ const TopPanel = () => {
 
             <div className="sendResumeContainer">
                 <button className="sendResumeButton">
-                    <img src="/origamiWhite.svg" className="origami" alt=""/>
+                    <img src="/origamiWhite.svg" className="origami" alt="" />
                     <label htmlFor="" className="origamiText">שלח קו"ח אלינו</label>
                 </button>
             </div>
