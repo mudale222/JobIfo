@@ -16,7 +16,7 @@ html, body {
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 .topPanel {
@@ -49,7 +49,9 @@ html, body {
 
 .middlePanel3 {
     background: #FFFFFF;
-    height: 25rem;
+    height: 29rem;
+    display: flex;
+    justify-content: center;
 }
 
 .middlePanel4 {
@@ -69,7 +71,7 @@ html, body {
 
 .footer {
     background: #FB8E0F;
-    height: 21.875rem;
+    /* height: 21.875rem; */
 }
 
 .topPanel-header {
@@ -105,6 +107,11 @@ html, body {
     position: fixed;
     right: 0;
     height: 100%;
+    z-index: 20;
+}
+
+.topHeader-burgerWrapper nav {
+    opacity: 0.95!important;
 }
 
 .companySloganAndIcon {
@@ -117,8 +124,10 @@ html, body {
 }
 
 .jobAwaitNumber {
-    font-size: 3rem;
     font-family: 'Roboto', sans-serif;
+}
+.loginJoinJobAwait .jobAwaitNumber {
+    font-size: 3rem;
 }
 
 .loginJoin {
@@ -235,7 +244,7 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* overflow: hidden; */
+    overflow: hidden;
     position: relative;
 }
 
@@ -404,12 +413,18 @@ html, body {
 .jobBanner {
     display: flex;
     flex-direction: row;
-    margin-left: 20%;
+    /* margin-left: 20%; */
+    justify-content: center;
 }
 
 .carousel {
     /* width: 65%;
     margin: auto; */
+}
+
+.carousel-inner {
+    /* width: unset!important; */
+    max-width: fit-content;
 }
 
 .carousel-item img {
@@ -545,4 +560,167 @@ html, body {
     position: absolute;
     bottom: -0.75rem;
     right: 0;
+}
+
+.imgCard {
+    background: #EDECEA;
+    color: #233292;
+    height: 18rem;
+    margin-top: 35%;
+}
+
+.imgCardTitle {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.imgCard-img {
+    border-radius: 50%;
+    position: relative;
+    bottom: 25%;
+    left: 25%;
+    border: 6px solid;
+}
+
+.imgCard h4 {
+    font-size: 1.35rem;
+}
+
+.stickyLeftSocialNetworksLinks {
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.7rem;
+    margin-top: 6rem;
+}
+
+.stickyLeftSocialNetworksLinks a {
+    display: block;
+}
+
+.stickyLeftSocialNetworksLinks img {
+    transform: scale(1.25);
+}
+
+.footerSocialMedia {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.footerSocialMedia i {
+    padding: 1rem;
+    transform: scale(1.5);
+}
+
+.footerSocialMedia .iconContainer {
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 3px solid;
+    border-radius: 100%;
+}
+
+.iconContainer {
+    position: relative;
+}
+
+.fa-facebook-f {
+    position: absolute;
+    left: 10%;
+    top: 5%;
+}
+
+.footerBlabla div a {
+    display: block;
+    color: #000!important;
+}
+
+.footerBlabla div:first-child {
+    display: block;
+    color: #000!important;
+}
+
+.footerBlabla {
+    text-align: right;
+}
+
+.footerContiner {
+    padding: 10%;
+}
+
+.row {
+    margin-right: unset!important;
+    margin-left: unset!important;
+}
+
+@media only screen and (max-width: 768px) {
+    .companySloganAndIcon {
+        width: 30%;
+        margin-left: 0;
+    }
+    .loginJoinJobAwait {
+        width: 65%;
+        justify-content: space-evenly;
+    }
+    .searchForJob {
+        margin-top: 1rem;
+        flex-direction: column-reverse;
+    }
+    .searchForJobButton, .searchForJobDropdown, .searchForJobText {
+        width: 80%;
+        margin: 0.5rem auto;
+    }
+    .searchForJobDropdown, .searchForJobText {
+        border: 1px solid #E8E8E8;
+        color: grey;
+    }
+    .searchForJobButton {
+        border-color: #202A68;
+        color: #202A68;
+    }
+    .sendResumeContainer {
+        margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .topPanelTraingle {
+        border-width: 12rem 12rem 0 0;
+    }
+    #card1, #card2, #card3, #card4, #card5 {
+        margin-bottom: 1rem;
+    }
+    #flatCard1, #flatCard2, #flatCard3, #flatCard4, #flatCard5,#flatCard6 {
+        margin-bottom: 1rem;
+    }
+    .middlePanel1, .middlePanel2, .middlePanel3, .middlePanel4 {
+        height: auto;
+    }
+    .topPanel>.searchForJob, .topPanel>.sendResumeContainer {
+        display: none;
+    }
+    .hiddenJobAwait {
+        display: block!important;
+        float:right;
+
+    }
+    .hiddenBorderBetweenLogin {
+        display: inline!important;
+        height: 4.25rem;
+        width: min-content;
+        margin-top: 1.05rem;
+        border-left: 4px solid orange;
+        float: right;
+        margin-right: 15px;
+    }
+    .jobAwait {
+        color: #202A68;
+    }
+    .jobAwaitText {
+        display: block;
+        font-size: 1.5rem;
+    }
+    .jobAwaitNumber {
+        font-weight: 800;
+    }
 }

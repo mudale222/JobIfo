@@ -3,7 +3,7 @@ import React, { useEffect, useState, useReducer } from 'react'
 const JobBanner = () => {
     const buttonText = "<< שלח >>"
     return (
-        <div className="jobBanner">
+        <div className="jobBanner d-none d-xl-flex">
 
             <div className="jobBannerContainer">
                 <img className="jobBannerFormImage" src="/jobForm.jpg" />

@@ -3,7 +3,7 @@ import React, { useEffect, useState, useReducer } from 'react'
 const MiddlePanel4 = () => {
     return (
         <div className="middlePanel4">
-            <div className="row container mx-auto text-right pt-5 justify-content-center">
+            <div className="row container mx-auto text-right pt-5 justify-content-center px-5">
                 <div className="text1 col-35">
                     <h4> חברת השמה בהייטק</h4>
 Jobinfo מתמחה בתהליכי איתור וגיוס מועמדים טכנולוגים. כחברת השמה אנו מלווים מעל 20 שנה מועמדים לכל אורך הקריירה, משלב היותם סטודנטים ועד הגעתם למשרות ניהוליות בכירות. חלק גדול מהמועמדים שליווינו חוזרים ומגייסים את הצוותים שלהם דרכנו.                    </div>
