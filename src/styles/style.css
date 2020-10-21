@@ -59,6 +59,11 @@ html, body {
     height: 31rem;
 }
 
+.middlePanel4 .row {
+    margin-right: auto!important;
+    margin-left: auto!important;
+}
+
 .middlePanel4 .col-35 {
     flex: 0 0 30%;
     max-width: 30%;
@@ -126,6 +131,7 @@ html, body {
 .jobAwaitNumber {
     font-family: 'Roboto', sans-serif;
 }
+
 .loginJoinJobAwait .jobAwaitNumber {
     font-size: 3rem;
 }
@@ -683,6 +689,18 @@ html, body {
     .sendResumeContainer {
         margin-top: 0.5rem;
         margin-bottom: 1.5rem;
+        height: 3rem;
+    }
+    .sendResumeButton {
+        max-width: 80%;
+        width: 80%;
+    }
+    .origamiText {
+        margin: 0;
+    }
+    .origami {
+        max-height: 80%;
+        margin-right: 2rem;
     }
     .topPanelTraingle {
         border-width: 12rem 12rem 0 0;
@@ -690,8 +708,11 @@ html, body {
     #card1, #card2, #card3, #card4, #card5 {
         margin-bottom: 1rem;
     }
-    #flatCard1, #flatCard2, #flatCard3, #flatCard4, #flatCard5,#flatCard6 {
-        margin-bottom: 1rem;
+    #flatCard1, #flatCard2, #flatCard3, #flatCard4, #flatCard5  {
+        margin-bottom: 0.5rem;
+    }
+    #flatCard6 {
+        margin-bottom: 3rem;
     }
     .middlePanel1, .middlePanel2, .middlePanel3, .middlePanel4 {
         height: auto;
@@ -701,8 +722,7 @@ html, body {
     }
     .hiddenJobAwait {
         display: block!important;
-        float:right;
-
+        float: right;
     }
     .hiddenBorderBetweenLogin {
         display: inline!important;
@@ -723,4 +743,35 @@ html, body {
     .jobAwaitNumber {
         font-weight: 800;
     }
+    .flatCardContainer {
+        max-width: unset!important;
+        height: fit-content!important;
+    }
+    .middlePanel2TitleContainer {
+        max-width: 95%;
+    }
+    .flatCard {
+        height: 21%;
+        overflow: auto;
+    }
+    .flatCard ul {
+        display: none;
+    }
+    .flatCard ul li {
+        margin-bottom: 0.5rem;
+    }
+    .flatCardLink {
+        display: none;
+    }
+    .card-body {
+        padding: 0.8rem;
+    }
+}
+
+.displayBlock {
+    display: block!important;
+}
+
+.displayFlex {
+    display: flex!important;
 }

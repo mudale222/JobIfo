@@ -26,7 +26,13 @@ const Footer = () => {
                     <div className="blabla1 col">{blablaData.first.map(el => <a>{el}</a>)}</div>
                 </div>
             </div>
-        </div>
+
+            <div className="coenerImgs pb-5 pl-5">
+                <img src="/cornerImg.png" alt="" className="cornerImg1" />
+                <img src="/cornerImg2.png" alt="" className="cornerImg2 ml-3" />
+            </div>
+
+        </div >
     )
 }
 

@@ -11,12 +11,12 @@ const flatCardsData = [
     {
         title: "אינטרנט", link: "משרות אינטרנט", titleColor: "#fff", listColor: "#202a68",
         cardColor: "#FB8E0F", listHoverColor: "#fff",
-        list: ["מתכנת JavaScript","מתכנת Web","מתכנת PHP","ASP.NET","גרפיקאי/מעצב","מתכנת HTML","קידום אתרים"]
+        list: ["מתכנת JavaScript", "מתכנת Web", "מתכנת PHP", "ASP.NET", "גרפיקאי/מעצב", "מתכנת HTML", "קידום אתרים"]
     },
     {
         title: "תוכנה", link: "משרות תוכנה", titleColor: "#202a68", listColor: "#202a68",
         cardColor: "#FFFFFF", listHoverColor: "#FFE1A7",
-        list: ["מתכנת C#/.NET","מתכנת ++C","מפתח למובייל","מפתח אלגוריתמים","מתכנת JAVA","System Architect","RT/Embedded"]
+        list: ["מתכנת C#/.NET", "מתכנת ++C", "מפתח למובייל", "מפתח אלגוריתמים", "מתכנת JAVA", "System Architect", "RT/Embedded"]
     },
     {
         title: "למשרות הייטק נוספות", link: "", titleColor: "#FB8E0F", listColor: "",
@@ -26,17 +26,28 @@ const flatCardsData = [
     {
         title: "משרות בכירות", link: "משרות בכירות", titleColor: "#fff", listColor: "#fff",
         cardColor: "#202A68", listHoverColor: "#FB8E0F",
-        list: ["תוכנה","אינטרנט","חומרה","שיווק","מכירות"]
+        list: ["תוכנה", "אינטרנט", "חומרה", "שיווק", "מכירות"]
     },
     {
         title: "תשתיות", link: "משרות תשתיות", titleColor: "#fff", listColor: "#fff",
         cardColor: "#9D9892", listHoverColor: "",
-        list: ["System Admin","System Manager","תמיכה טכנית","מומחה אבטחת מידע"]
+        list: ["System Admin", "System Manager", "תמיכה טכנית", "מומחה אבטחת מידע"]
     }
 ]
 
+const openCard = (e) => {
+    console.log(e.target)
+    let ulId = e.target.closest('[id^=flatCard]').id + "Ul";
+    let linkId = e.target.closest('[id^=flatCard]').id + "Link";
+    if (document.getElementById(ulId) != null) {
+        document.getElementById(ulId).classList.toggle("displayBlock")
+        document.getElementById(linkId).classList.toggle("displayFlex")
+    }
+    // debugger;
+}
+
 const MiddlePanel2 = () => {
-    let counter=0
+    let counter = 0
     return (
         <div className="middlePanel2">
             <div className="middlePanel2TitleContainer text-center  text-light container">
@@ -44,8 +55,11 @@ const MiddlePanel2 = () => {
                 <div className="row justify-content-center">
                     {flatCardsData.map(flatCardData => {
                         counter++
+                        flatCardData.id = "flatCard" + counter
                         return (
-                            <div id={"flatCard" + counter} key={"flatCard" + counter} className="col-lg-4 flatCardContainer p-0 border-0">
+                            <div id={"flatCard" + counter} key={"flatCard" + counter}
+                                className="col-lg-4 flatCardContainer p-0 border-0"
+                                onClick={(e) => openCard(e)}>
                                 <FlatCard data={flatCardData} />
                             </div>
                         )
